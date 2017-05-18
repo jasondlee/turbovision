@@ -9,7 +9,7 @@
   This is the base class for low level screen output.
   Most members are pointers to functions defined by each platform dependent
 driver. Default members are provided.
-  This is a complete new file created from concepts that José Angel Sanchez
+  This is a complete new file created from concepts that Jos? Angel Sanchez
 Caso provide me and coded from scratch. The names of some members are the
 same used in original Turbo Vision for compatibility purposes.
   
@@ -381,10 +381,10 @@ Boolean TDisplay::searchClosestRes(TScreenResolution *res, unsigned x,
  if (firstXMatch!=-1)
    {// Return the closest y that match x
     i=indexMin=firstXMatch;
-    minDif=abs(res[i].y-y);
+    minDif=abs(int(res[i].y-y));
     while (++i<cant && res[i].x==x)
       {
-       dif=abs(res[i].y-y);
+       dif=abs(int(res[i].y-y));
        if (dif<minDif)
          {
           minDif=dif;
@@ -396,11 +396,11 @@ Boolean TDisplay::searchClosestRes(TScreenResolution *res, unsigned x,
    }
  // No x match, looks the one with minimum differences
  indexMin=0;
- minDif=abs(res[0].y-y)+abs(res[0].x-x);
+ minDif=abs(int(res[0].y-y))+abs(int(res[0].x-x));
  i=1;
  while (i<cant)
    {
-    dif=abs(res[i].y-y)+abs(res[i].x-x);
+    dif=abs(int(res[i].y-y))+abs(int(res[i].x-x));
     if (dif<minDif)
       {
        minDif=dif;
