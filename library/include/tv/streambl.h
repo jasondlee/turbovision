@@ -21,10 +21,10 @@ Modified by Robert H”hne to be used for RHIDE.
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_TStreamable ) && !defined( __TStreamable )
+#if !defined( __TStreamable )
 #define __TStreamable
 
-class CLY_EXPORT TStreamable
+class TStreamable
 {
 
     friend class opstream;

@@ -11,7 +11,7 @@ Modified by Robert H”hne to be used for RHIDE.
  *
  */
 
-#if defined( Uses_TGroup ) && !defined( __TGroup )
+#if !defined( __TGroup )
 #define __TGroup
 
 class CLY_EXPORT TGroup : public TView
@@ -19,7 +19,7 @@ class CLY_EXPORT TGroup : public TView
 
 public:
 
-    friend void genRefs();
+    //friend void genRefs();
 
     TGroup( const TRect& bounds );
     ~TGroup();

@@ -11,7 +11,7 @@ Modified by Robert H”hne to be used for RHIDE.
  *
  */
 
-#if defined( Uses_TObject ) && !defined( __TObject )
+#if !defined( __TObject )
 #define __TObject
 
 #include <stddef.h>

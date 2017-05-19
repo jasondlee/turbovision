@@ -12,7 +12,7 @@ Modified by Salvador E. Tropea (setScreenMode and other things)
  *
  */
 
-#if defined( Uses_TProgram ) && !defined( __TProgram )
+#if !defined( __TProgram )
 #define __TProgram
 
 #define cpColor \
@@ -80,7 +80,7 @@ const int
     apMonochrome = 2;
 
 
-class CLY_EXPORT TProgram : public TGroup, public virtual TProgInit
+class TProgram : public virtual TProgInit, public TGroup
 {
 
 public:

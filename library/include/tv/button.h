@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Added callback, code page stuff and various details by Salvador Eduardo Tropea.
 Added new class TButtonRef by Salvador Eduardo Tropea.
 Added i18n support by Salvador Eduardo Tropea.
@@ -28,7 +28,7 @@ Added i18n support by Salvador Eduardo Tropea.
 /*        8 = Shadow                                                      */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TButton ) && !defined( __TButton )
+#if !defined( __TButton )
 #define __TButton
 
 class TRect;

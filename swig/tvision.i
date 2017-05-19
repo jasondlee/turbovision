@@ -124,14 +124,38 @@
 #define Uses_TVPartitionTree556 
 #define Uses_TWindow 
 #define Uses_ViewCommands 
+#define CLY_EXPORT
 
 #include "tv.h"
+#include "tv/applictn.h"
 %}
 
+%define CLY_EXPORT
+%enddef
 //%define Uses_TApplication
 //%enddef
-%include "tv.h"
+//%include "tv.h"
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"
-//%include "tv/program.h"
-//%include "tv/applictn.h"
+%include "tv/streambl.h"
+%include "tv/object.h"
+%include "tv/view.h"
+%include "tv/group.h"
+%include "tv/menubar.h"
+%include "tv/program.h"
+%include "tv/applictn.h"
+
+/*
+class TApplication : public TProgram
+{
+
+protected:
+
+    TApplication();
+    virtual ~TApplication();
+
+    virtual void suspend();
+    virtual void resume();
+
+};
+*/

@@ -4,3 +4,4 @@
 *.mak
 CVS
 *.lo
+/swig/target/

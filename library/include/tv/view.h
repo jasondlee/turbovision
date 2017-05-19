@@ -12,7 +12,7 @@ Modified by Salvador E. Tropea for Unicode Copyright (c) 2003.
  *
  */
 
-#if defined( Uses_TView ) && !defined( __TView )
+#if !defined( __TView )
 #define __TView
 
 class TRect;
@@ -21,7 +21,7 @@ class TGroup;
 class TPalette;
 class TCommandSet;
 
-class CLY_EXPORT TView : public TObject
+class TView : public TObject
 #if !defined ( NO_STREAM )
                              , public TStreamable
 #endif // NO_STREAM
@@ -29,7 +29,7 @@ class CLY_EXPORT TView : public TObject
 
 public:
 
-    friend void genRefs();
+    //friend void genRefs();
 
     enum phaseType { phFocused, phPreProcess, phPostProcess };
     enum selectMode{ normalSelect, enterSelect, leaveSelect };

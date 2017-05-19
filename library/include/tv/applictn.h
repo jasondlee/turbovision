@@ -5,21 +5,22 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
  */
 
-#if defined( Uses_TApplication ) && !defined( __TApplication )
+#if !defined( __TApplication )
 #define __TApplication
 
-class CLY_EXPORT TApplication : public TProgram
+class TApplication : public TProgram
 {
+public:
+    TApplication();
 
 protected:
 
-    TApplication();
     virtual ~TApplication();
 
     virtual void suspend();

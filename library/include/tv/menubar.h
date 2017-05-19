@@ -23,7 +23,7 @@ Modified by Robert H”hne to be used for RHIDE.
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TMenuBar ) && !defined( __TMenuBar )
+#if !defined( __TMenuBar )
 #define __TMenuBar
 
 class TRect;
