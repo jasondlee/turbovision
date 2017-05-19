@@ -7,7 +7,7 @@
 .PHONY: clean
 
 examples=demo/demo desklogo/desklogo desklogo/set-logo \
-	desklogo/tv_logo dlgdsn/libtest dyntxt/dyntext \
+	desklogo/tv_logo dyntxt/dyntext \
 	inplis/implis listvi/lst_view msgcls/msgcls \
 	progba/test sdlg/test sdlg2/test tcombo/test \
 	terminal/test tprogb/test tutorial/tvguid01 \
@@ -39,7 +39,7 @@ desklogo/set-logo.exe: desklogo/set-logo.gpr
 
 desklogo/tv_logo.exe: desklogo/tv_logo.gpr
 
-dlgdsn/libtest.exe: dlgdsn/libtest.gpr
+#dlgdsn/libtest.exe: dlgdsn/libtest.gpr
 
 dyntxt/dyntext.exe: dyntxt/dyntext.gpr
 

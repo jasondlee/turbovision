@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert H?hne to be used for RHIDE.
 Heavily modified by Salvador E. Tropea to support multibyte encodings.
 Now the original TInputLine is composed by:
 
@@ -277,7 +277,7 @@ class CLY_EXPORT TInput1LineU16 : public TInputLineU16
 public:
  TInput1LineU16(int x, int y, int max) :
    TInputLineU16(TRect(x,y,x+max+2,y+1), max) {};
-}
+};
 #endif // Uses_TInput1Line
 
 #if defined( Uses_newInputLine ) && !defined( newInputLine_defined )

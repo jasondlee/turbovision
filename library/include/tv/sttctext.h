@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert H?hne to be used for RHIDE.
 Modified by Salvador E. Tropea: added i18n support, added T1StaticText.
 
  *
@@ -89,6 +89,6 @@ public:
  T1StaticText(int x, int y, const char *aText) :
    TStaticText(TRect(x,y,x,y),aText)
    { growTo(cstrlen(TVIntl::getText(aText,intlText))+1,1); };
-}
+};
 #endif // Uses_T1StaticText
 

@@ -8,6 +8,9 @@
   
 ***************************************************************************/
 
+#if !defined( OSClipboard_defined )
+#define OSClipboard_defined 
+
 class TScreen;
 class TVDOSClipboard;
 class TVWin32Clipboard;
@@ -42,3 +45,4 @@ protected:
  friend class TVWin32Clipboard;
 };
 
+#endif
