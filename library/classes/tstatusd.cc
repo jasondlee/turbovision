@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -30,6 +30,23 @@ CLY_EXPORT TStatusDef& operator + ( TStatusDef& s1, TStatusItem& s2 )
         cur->next = &s2;
         }
     return s1;
+}
+
+TStatusDef& TStatusDef::addItem ( TStatusItem& s2 )
+{
+    TStatusDef *def = this;
+    while( def->next != 0 )
+        def = def->next;
+    if( def->items == 0 )
+        def->items = &s2;
+    else
+        {
+        TStatusItem *cur = def->items;
+        while( cur->next != 0 )
+            cur = cur->next;
+        cur->next = &s2;
+        }
+    return *def;
 }
 
 CLY_EXPORT TStatusDef& operator + ( TStatusDef& s1, TStatusDef& s2 )

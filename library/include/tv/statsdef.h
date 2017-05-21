@@ -5,14 +5,15 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
  */
 
-#if defined( Uses_TStatusDef ) && !defined( __TStatusDef )
+#if !defined( __TStatusDef )
 #define __TStatusDef
+class  TStatusItem;
 
 class CLY_EXPORT TStatusDef
 {
@@ -24,7 +25,8 @@ public:
                 TStatusItem *someItems = 0,
                 TStatusDef *aNext = 0
               );
-
+    TStatusDef& addItem ( TStatusItem& s2 );
+            
     TStatusDef *next;
     ushort min;
     ushort max;

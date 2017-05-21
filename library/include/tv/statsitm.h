@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea to allow dynamic status bars and i18n support.
 
  *
  *
  */
 
-#if defined( Uses_TStatusItem ) && !defined( __TStatusItem )
+#if !defined( __TStatusItem )
 #define __TStatusItem
 
 class TStatusItem

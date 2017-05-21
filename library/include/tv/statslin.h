@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -23,7 +23,7 @@ Modified by Robert H”hne to be used for RHIDE.
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TStatusLine ) && !defined( __TStatusLine )
+#if !defined( __TStatusLine )
 #define __TStatusLine
 
 class TRect;

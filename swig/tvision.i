@@ -130,6 +130,10 @@
 #include "tv/applictn.h"
 %}
 
+%define ushort
+unsigned short
+%enddef
+
 %define CLY_EXPORT
 %enddef
 //%define Uses_TApplication
@@ -137,11 +141,18 @@
 //%include "tv.h"
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"
+%include "tv/tkeys.h"
+%include "tv/views.h"
 %include "tv/streambl.h"
 %include "tv/object.h"
 %include "tv/view.h"
 %include "tv/group.h"
+%include "tv/point.h"
+%include "tv/rect.h"
 %include "tv/menubar.h"
+%include "tv/statsdef.h"
+%include "tv/statsitm.h"
+%include "tv/statslin.h"
 %include "tv/program.h"
 %include "tv/applictn.h"
 
