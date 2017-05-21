@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea for Unicode Copyright (c) 2003.
 
  *
@@ -52,8 +52,6 @@ public:
     void growTo( int x, int y );
     void moveTo( int x, int y );
     void setBounds( const TRect& bounds );
-
-    virtual ushort getHelpCtx();
 
     virtual Boolean valid( ushort command );
 

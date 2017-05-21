@@ -19,7 +19,7 @@ swig -v \
     tvision.i
 #}
 g++ -DUses_TApplication -c -fPIC $JAVA_INCLUDE -I../library/include -I/include/boost-0  -L../library/makes -lrhtv tvision_wrap.cxx  -I"/opt/jdk-1.8/include" -I"/opt/jdk-1.8/include/linux"
-g++ -shared  -L../library/makes -lrhtv tvision_wrap.o    -o libtvision.so
+g++ -shared   tvision_wrap.o    -o libtvision.so -L../library/makes -lrhtv
 #-I/include/boost-0 $JAVA_INCLUDE   
 
 #g++ -Wall -Wno-sign-compare -Wpointer-arith \
