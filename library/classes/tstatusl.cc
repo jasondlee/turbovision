@@ -269,7 +269,8 @@ const char* TStatusLine::hint( ushort )
 void TStatusLine::update()
 {
     TView *p = TopView();
-    ushort h = ( p != 0 ) ? p->getHelpCtx() : hcNoContext;
+    ushort h = //( p != 0 ) ? p->getHelpCtx() : 
+	    hcNoContext;
     if( helpCtx != h )
         {
         helpCtx = h;

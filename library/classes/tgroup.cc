@@ -572,6 +572,7 @@ Boolean TGroup::valid( ushort command )
     return Boolean( firstThat( isInvalid, &command ) == 0 );
 }
 
+/*
 ushort TGroup::getHelpCtx()
 {
     ushort h = hcNoContext;
@@ -581,6 +582,7 @@ ushort TGroup::getHelpCtx()
         h = TView::getHelpCtx();
     return h;
 }
+*/
 
 #if !defined( NO_STREAM )
 static void doPut( TView *p, void *osp )

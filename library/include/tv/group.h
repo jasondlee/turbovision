@@ -90,6 +90,7 @@ public:
 private:
 
     Boolean invalid( TView *p, ushort command );
+    void getBuffer();
     void focusView( TView *p, Boolean enable );
     void selectView( TView *p, Boolean enable );
 #if !defined( NO_STREAM )

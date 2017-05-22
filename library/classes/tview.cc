@@ -460,12 +460,14 @@ TRect TView::getExtent()
     return TRect( 0, 0, size.x, size.y );
 }
 
+/*
 ushort TView::getHelpCtx()
 {
     if( (state & sfDragging) != 0 )
         return hcDragging;
     return helpCtx;
 }
+*/
 
 TPalette& TView::getPalette() const
 {

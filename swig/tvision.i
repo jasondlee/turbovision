@@ -2,6 +2,7 @@
 %module tvision
 
 %{
+#define NO_STREAM
 #define Uses_EventCodes 
 #define Uses_fpbase 
 #define Uses_fpstream 
@@ -134,6 +135,8 @@
 unsigned short
 %enddef
 
+%define NO_STREAM
+%enddef
 %define CLY_EXPORT
 %enddef
 //%define Uses_TApplication
