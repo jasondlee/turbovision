@@ -20,7 +20,6 @@ public:
     TApplication();
 
 protected:
-
     virtual ~TApplication();
 
     virtual void suspend();

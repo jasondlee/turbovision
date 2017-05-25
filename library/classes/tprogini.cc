@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -22,13 +22,14 @@ Modified by Robert H”hne to be used for RHIDE.
 TScreen          *TProgInit::tsc=NULL;
 TVMainConfigFile *TProgInit::config=NULL;
 
-TProgInit::TProgInit( TStatusLine *(*cStatusLine)( TRect ),
-                            TMenuBar *(*cMenuBar)( TRect ),
-                            TDeskTop *(*cDeskTop )( TRect )
-                          ) :
-    createStatusLine( cStatusLine ),
-    createMenuBar( cMenuBar ),
-    createDeskTop( cDeskTop )
+TProgInit::TProgInit( 
+                            //TStatusLine *(*cStatusLine)( TRect ),
+                            //TMenuBar *(*cMenuBar)( TRect ),
+                            //TDeskTop *(*cDeskTop )( TRect )
+                          ) //:
+    //createStatusLine( cStatusLine ),
+    //createMenuBar( cMenuBar ),
+    //createDeskTop( cDeskTop )
 {
  // Load the configuration file
  if (!config)

@@ -21,7 +21,7 @@ Andris Pavenis.
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_pstream ) && !defined( __pstream )
+#if !defined( __pstream )
 #define __pstream
 
 class TStreamableTypes;

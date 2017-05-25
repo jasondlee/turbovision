@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea (release CPU and other stuff)
 Modified by Salvador E. Tropea to compile for 64 bits architectures.
 Modified by Salvador E. Tropea to disable Alt+N stuff.
@@ -51,9 +51,10 @@ char    TProgram::doNotHandleAltNumber = 0;
 extern TPoint shadowSize;
 
 TProgram::TProgram() :
-    TProgInit( &TProgram::initStatusLine,
-                  &TProgram::initMenuBar,
-                  &TProgram::initDeskTop
+    TProgInit( 
+//                  &TProgram::initStatusLine,
+//                  &TProgram::initMenuBar,
+//                  &TProgram::initDeskTop
                 ),
     TGroup( TRect( 0,0,TScreen::screenWidth,TScreen::screenHeight ) )
 {
@@ -66,20 +67,21 @@ TProgram::TProgram() :
     if( TScreen::noUserScreen() )
         disableCommand( cmCallShell );
 
-    if( createStatusLine != 0 &&
-        (statusLine = createStatusLine( getExtent() )) != 0
-      )
-        insert(statusLine);
+    
+//    if( createStatusLine != 0 &&
+//        (statusLine = createStatusLine( getExtent() )) != 0
+//      )
+        insert(initStatusLine( getExtent() ));
 
-    if( createMenuBar != 0 &&
-        (menuBar = createMenuBar( getExtent() )) != 0
-      )
-        insert(menuBar);
+//    if( createMenuBar != 0 &&
+//        (menuBar = createMenuBar( getExtent() )) != 0
+//      )
+        insert(initMenuBar( getExtent() ));
 
-    if( createDeskTop != 0 &&
-        (deskTop = createDeskTop( getExtent() )) != 0
-      )
-        insert(deskTop);
+//    if( createDeskTop != 0 &&
+//        (deskTop = createDeskTop( getExtent() )) != 0
+//      )
+        insert(initDeskTop ( getExtent() ));
 
 }
 
@@ -262,7 +264,7 @@ void TProgram::idle()
         }
 }
 
-TDeskTop *TProgram::initDeskTop( TRect r )
+TDeskTop* TProgram::initDeskTop( TRect r )
 {
     if (menuBar)
       r.a.y += menuBar->size.y;
@@ -275,7 +277,7 @@ TDeskTop *TProgram::initDeskTop( TRect r )
     return new TDeskTop( r );
 }
 
-TMenuBar *TProgram::initMenuBar( TRect r )
+TMenuBar* TProgram::initMenuBar( TRect r )
 {
     r.b.y = r.a.y + 1;
     return new TMenuBar( r, (TMenu *)0 );
@@ -306,7 +308,7 @@ void TProgram::initScreen()
         }
 }
 
-TStatusLine *TProgram::initStatusLine( TRect r )
+TStatusLine* TProgram::initStatusLine( TRect r )
 {
     r.a.y = r.b.y - 1;
     return new TStatusLine( r,

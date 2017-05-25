@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
  *
- * Modified by Robert H”hne to be used for RHIDE.
+ * Modified by Robert Hï¿½hne to be used for RHIDE.
 
 Modified cursor behavior while desktop locked by Salvador E. Tropea (SET)
 Modified for Unicode buffers by Salvador E. Tropea (SET)
@@ -572,7 +572,6 @@ Boolean TGroup::valid( ushort command )
     return Boolean( firstThat( isInvalid, &command ) == 0 );
 }
 
-/*
 ushort TGroup::getHelpCtx()
 {
     ushort h = hcNoContext;
@@ -582,7 +581,6 @@ ushort TGroup::getHelpCtx()
         h = TView::getHelpCtx();
     return h;
 }
-*/
 
 #if !defined( NO_STREAM )
 static void doPut( TView *p, void *osp )

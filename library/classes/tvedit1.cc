@@ -44,9 +44,10 @@ TEditWindow *TEditorApp::openEditor( const char *fileName, Boolean visible )
 }
 
 TEditorApp::TEditorApp() :
-    TProgInit( TEditorApp::initStatusLine,
-               TEditorApp::initMenuBar,
-               TEditorApp::initDeskTop
+    TProgInit( 
+//               TEditorApp::initStatusLine,
+//               TEditorApp::initMenuBar,
+//               TEditorApp::initDeskTop
              ),
     TApplication()
 {

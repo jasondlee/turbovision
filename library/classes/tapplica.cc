@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -159,9 +159,10 @@ void initHistory();
 void doneHistory();
 
 TApplication::TApplication() :
-    TProgInit( &TApplication::initStatusLine,
-                  &TApplication::initMenuBar,
-                  &TApplication::initDeskTop
+    TProgInit( 
+//                  &TApplication::initStatusLine,
+//                  &TApplication::initMenuBar,
+//                  &TApplication::initDeskTop
                 )
 {
     if (!teq)

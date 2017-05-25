@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -269,8 +269,7 @@ const char* TStatusLine::hint( ushort )
 void TStatusLine::update()
 {
     TView *p = TopView();
-    ushort h = //( p != 0 ) ? p->getHelpCtx() : 
-	    hcNoContext;
+    ushort h = ( p != 0 ) ? p->getHelpCtx() : hcNoContext;
     if( helpCtx != h )
         {
         helpCtx = h;

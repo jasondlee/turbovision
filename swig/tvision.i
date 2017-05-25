@@ -5,14 +5,14 @@
 #define NO_STREAM
 #define Uses_EventCodes 
 #define Uses_fpbase 
-#define Uses_fpstream 
-#define Uses_ifpstream 
-#define Uses_iopstream 
-#define Uses_ipstream 
+//#define Uses_fpstream 
+//#define Uses_ifpstream 
+//#define Uses_iopstream 
+//#define Uses_ipstream 
 #define Uses_MsgBox 
-#define Uses_ofpstream 
-#define Uses_opstream
-#define Uses_pstream 
+//#define Uses_ofpstream 
+//#define Uses_opstream
+//#define Uses_pstream 
 #define Uses_T1Label 
 #define Uses_T1StaticText
 #define Uses_TApplication 
@@ -105,7 +105,7 @@
 #define Uses_TStatusDef 
 #define Uses_TStatusItem 
 #define Uses_TStatusLine 
-#define Uses_TStreamable 
+//#define Uses_TStreamable 
 #define Uses_TStreamableClass 
 #define Uses_TStreamableTypes 
 #define Uses_TStrIndexRec 
@@ -128,7 +128,7 @@
 #define CLY_EXPORT
 
 #include "tv.h"
-#include "tv/applictn.h"
+//#include "tv/applictn.h"
 %}
 
 %define ushort
@@ -139,11 +139,14 @@ unsigned short
 %enddef
 %define CLY_EXPORT
 %enddef
-//%define Uses_TApplication
-//%enddef
 //%include "tv.h"
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"
+
+//%include "tv/pstream.h"
+//%include "tv/ipstream.h"
+//%include "tv/opstream.h"
+
 %include "tv/tkeys.h"
 %include "tv/views.h"
 %include "tv/streambl.h"

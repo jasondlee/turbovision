@@ -23,7 +23,7 @@
  *                                                                         *
  * ------------------------------------------------------------------------*/
 
-#if defined( Uses_ipstream ) && !defined( __ipstream )
+#if !defined( __ipstream )
 #define __ipstream
 
 class TStreamableClass;

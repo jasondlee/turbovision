@@ -108,6 +108,7 @@ inline Boolean TRect::isEmpty()
     return Boolean( a.x >= b.x || a.y >= b.y );
 }
 
+#if !defined ( NO_STREAM)
 inline ipstream& operator >> ( ipstream& is, TRect& r )
     { return is >> r.a >> r.b; }
 inline ipstream& operator >> ( ipstream& is, TRect*& r )
@@ -117,6 +118,7 @@ inline opstream& operator << ( opstream& os, TRect& r )
     { return os << r.a << r.b; }
 inline opstream& operator << ( opstream& os, TRect* r )
     { return os << r->a << r->b; }
+#endif
 
 #endif  // Uses_TRect
 

@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -111,7 +111,7 @@ void THistory::handleEvent( TEvent& event )
 THistoryWindow *THistory::initHistoryWindow( const TRect& bounds )
 {
     THistoryWindow *p = new THistoryWindow( bounds, historyId );
-    p->helpCtx = link->helpCtx;
+    p->setHelpCtx(link->getHelpCtx());
     return p;
 }
 

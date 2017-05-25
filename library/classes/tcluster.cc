@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Added palette color and draw code for disabled clusters by Salvador E. Tropea
 Added TSItem::append by Salvador E. Tropea
 

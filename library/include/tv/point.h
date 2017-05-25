@@ -44,6 +44,7 @@ inline TPoint& TPoint::operator -= ( const TPoint& subber )
     return *this;
 }
 
+#if !defined ( NO_STREAM )
 inline ipstream& operator >> ( ipstream& is, TPoint& p )
     { return is >> p.x >> p.y; }
 inline ipstream& operator >> ( ipstream& is, TPoint*& p )
@@ -53,6 +54,7 @@ inline opstream& operator << ( opstream& os, TPoint& p )
     { return os << p.x << p.y; }
 inline opstream& operator << ( opstream& os, TPoint* p )
     { return os << p->x << p->y; }
+#endif
 
 #endif  // Uses_TPoint
 

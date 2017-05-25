@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea (setScreenMode and other things)
 
  *
@@ -45,9 +45,10 @@ class  TVMainConfigFile;
 class CLY_EXPORT TProgInit
 {
 public:
-    TProgInit( TStatusLine *(*cStatusLine)( TRect ),
-               TMenuBar *(*cMenuBar)( TRect ),
-               TDeskTop *(*cDeskTop )( TRect )
+    TProgInit( 
+               //TStatusLine *(*cStatusLine)( TRect ),
+               //TMenuBar *(*cMenuBar)( TRect ),
+               //TDeskTop *(*cDeskTop )( TRect )
              );
     virtual ~TProgInit();
     static TVMainConfigFile *config;
@@ -111,9 +112,9 @@ public:
     void syncScreenBuffer();
     //   { buffer = TScreen::screenBuffer; }
 
-    static TStatusLine *initStatusLine( TRect );
-    static TMenuBar *initMenuBar( TRect );
-    static TDeskTop *initDeskTop( TRect );
+    virtual TStatusLine* initStatusLine( TRect );
+    virtual TMenuBar* initMenuBar( TRect );
+    virtual TDeskTop* initDeskTop( TRect );
 
     static TProgram * application;
     static TStatusLine * statusLine;

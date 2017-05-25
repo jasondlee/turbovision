@@ -54,6 +54,8 @@ public:
     void setBounds( const TRect& bounds );
 
     virtual Boolean valid( ushort command );
+    virtual ushort getHelpCtx();
+    virtual void setHelpCtx(ushort ctx);
 
     void hide();
     void show();
@@ -145,7 +147,6 @@ public:
     TPoint cursor;
     uchar growMode;
     uchar dragMode;
-    ushort helpCtx;
     static Boolean commandSetChanged;
     static TCommandSet curCommandSet;
     TGroup *owner;
@@ -182,6 +183,7 @@ private:
 protected:
 
     TView( StreamableInit );
+    ushort helpCtx;
 
 public:
 
@@ -195,6 +197,7 @@ protected:
 #endif // NO_STREAM
 };
 
+#if !defined( NO_STREAM )
 inline ipstream& operator >> ( ipstream& is, TView& cl )
     { return is >> (TStreamable&)cl; }
 inline ipstream& operator >> ( ipstream& is, TView*& cl )
@@ -204,6 +207,7 @@ inline opstream& operator << ( opstream& os, TView& cl )
     { return os << (TStreamable&)cl; }
 inline opstream& operator << ( opstream& os, TView* cl )
     { return os << (TStreamable *)cl; }
+#endif // NO_STREAM
 
 #endif  // Uses_TView
 

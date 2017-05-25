@@ -21,7 +21,7 @@ Andris Pavenis and Christoph Bauer.
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_opstream ) && !defined( __opstream )
+#if !defined( __opstream )
 #define __opstream
 
 class TStreamableClass;
