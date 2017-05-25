@@ -11,7 +11,7 @@ that can be changed by the hardware/OS dependent driver.
 classes, but doesn't have much in common.
 */
 
-#if defined( Uses_TScreen ) && !defined( __TScreen )
+#if !defined( __TScreen )
 #define __TScreen
 
 class TVCodePage;
@@ -38,7 +38,7 @@ typedef TScreenFont256 *(*TVScreenFontRequestCallBack)(int which, unsigned w,
                          unsigned height);
 // Type for the callback called when the driver is detected.
 // This is called when we know which driver will be used but it isn't
-// initilized yet.
+// initialized yet.
 typedef void (*TVScreenDriverDetectCallBack)();
 
 const int TDisplayDOSModesNum=18;
@@ -101,7 +101,6 @@ public:
   smCO132x60= 0x010C
  };
 
- static void   (*clearScreen)(uchar w, uchar h);
 
  // SET: The following two are for compatibility, see *CursorShape
  static void     setCursorType(ushort val);
@@ -187,6 +186,7 @@ protected:
  TDisplay(const TDisplay&);
  // We will use casts to base classes, destructors must be pointers
  virtual ~TDisplay();
+ static void   (*clearScreen)(uchar w, uchar h);
 
  // A copy of the command line arguments, old applications doesn't
  // provide it.

@@ -134,6 +134,10 @@
 unsigned short
 %enddef
 
+%define uchar
+unsigned char
+%enddef
+
 %define CLY_EXPORT
 %enddef
 //%define Uses_TApplication
@@ -149,6 +153,7 @@ unsigned short
 %include "tv/group.h"
 %include "tv/point.h"
 %include "tv/rect.h"
+%include "tv/screen.h"
 %include "tv/menubar.h"
 %include "tv/statsdef.h"
 %include "tv/statsitm.h"
