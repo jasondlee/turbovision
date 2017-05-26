@@ -5,13 +5,13 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
  */
 
-#if defined( Uses_TSubMenu ) && !defined( __TSubMenu )
+#if !defined( __TSubMenu )
 #define __TSubMenu
 
 class CLY_EXPORT TSubMenu : public TMenuItem

@@ -24,7 +24,7 @@ Modified by Salvador E. Tropea to enhance functionality.
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TMenuView ) && !defined( __TMenuView )
+#if !defined( __TMenuView )
 #define __TMenuView
 
 class TRect;

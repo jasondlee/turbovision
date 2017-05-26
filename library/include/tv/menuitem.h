@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea. More operators and append. Also i18n support.
 
  *
  *
  */
 
-#if defined( Uses_TMenuItem ) && !defined( __TMenuItem )
+#if !defined( __TMenuItem )
 #define __TMenuItem
 
 class TMenu;

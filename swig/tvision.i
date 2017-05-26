@@ -2,6 +2,7 @@
 %module tvision
 
 %{
+#define NO_STREAM1
 #define Uses_EventCodes 
 #define Uses_fpbase 
 #define Uses_fpstream 
@@ -127,8 +128,11 @@
 #define CLY_EXPORT
 
 #include "tv.h"
-#include "tv/applictn.h"
+
 %}
+
+%define NO_STREAM1
+%enddef
 
 %define ushort
 unsigned short
@@ -140,9 +144,8 @@ unsigned char
 
 %define CLY_EXPORT
 %enddef
-//%define Uses_TApplication
-//%enddef
-//%include "tv.h"
+
+%include "tv.h"
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"
 %include "tv/tkeys.h"
@@ -154,6 +157,8 @@ unsigned char
 %include "tv/point.h"
 %include "tv/rect.h"
 %include "tv/screen.h"
+%include "tv/menuview.h"
+%include "tv/menuitem.h"
 %include "tv/menubar.h"
 %include "tv/statsdef.h"
 %include "tv/statsitm.h"
