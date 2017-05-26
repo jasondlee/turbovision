@@ -1,6 +1,7 @@
 package com.steeplesoft.turbovision;
 
 import com.steeplesoft.turbovision.internal.TApplication;
+import com.steeplesoft.turbovision.internal.TProgram;
 import com.steeplesoft.turbovision.internal.TRect;
 import com.steeplesoft.turbovision.internal.TScreen;
 import com.steeplesoft.turbovision.internal.TStatusDef;
@@ -33,11 +34,15 @@ public class TurboVisionDemo {
 
         public MyApp() {
             super();
-            initStatusLine(new TRect(0, 0, TScreen.getScreenWidth(), TScreen.getScreenHeight()));
+//            TProgram.setStatusLine(createStatusLine(new TRect(0, 0, TScreen.getScreenWidth(), TScreen.getScreenHeight())));
         }
 
-        @Override
-        public TStatusLine initStatusLine(TRect r) {
+          @Override
+          public TStatusLine initStatusLine(TRect arg0) {
+              return createStatusLine(arg0);
+          }
+          
+        private TStatusLine createStatusLine(TRect r) {
             System.err.println("initStatusLine");
             r.getA().setY(r.getB().getY() - 1);     // move top to 1 line above bottom
             final TStatusDef statusDef = new TStatusDef(0, 0xFFFF);

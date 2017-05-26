@@ -4,12 +4,12 @@
  *      Copyright (c) 1994 by Borland International
  *      All Rights Reserved.
  *
- * Modified by Robert H”hne to be used for RHIDE.
+ * Modified by Robert Hï¿½hne to be used for RHIDE.
  * SET: Hardware abstaction with ideas from JASC.
  *
  */
 
-#if defined( Uses_TEvent ) && !defined( __TEvent )
+#if !defined( __TEvent )
 #define __TEvent
 
 struct MouseEventType

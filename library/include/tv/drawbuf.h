@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Changed classes hierarchy and added new draw buffers by Salvador E. Tropea
 (Changes under GPL as usual).
 
@@ -13,7 +13,7 @@ Changed classes hierarchy and added new draw buffers by Salvador E. Tropea
  *
  */
 
-#if defined( Uses_TDrawBuffer ) && !defined( __TDrawBuffer )
+#if !defined( __TDrawBuffer )
 #define __TDrawBuffer
 
 class CLY_EXPORT TDrawBufferBase

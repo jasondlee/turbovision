@@ -15,7 +15,7 @@
 #define Uses_pstream 
 #define Uses_T1Label 
 #define Uses_T1StaticText
-#define Uses_TApplication 
+//#define Uses_TApplication 
 #define Uses_TBackground 
 #define Uses_TButton 
 #define Uses_TCalcDisplay
@@ -40,7 +40,7 @@
 #define Uses_TDirListBox 
 #define Uses_TDrawBuffer 
 #define Uses_TEditor
-#define Uses_TEditorApp
+//#define Uses_TEditorApp
 #define Uses_TEditWindow
 #define Uses_TEvent 
 #define Uses_TEventQueue 
@@ -149,9 +149,13 @@ unsigned char
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"
 %include "tv/tkeys.h"
+%include "tv/cmdset.h"
+%include "tv/palette.h"
+%include "tv/drawbuf.h"
 %include "tv/views.h"
 %include "tv/streambl.h"
 %include "tv/object.h"
+%include "tv/event.h"
 %include "tv/view.h"
 %include "tv/group.h"
 %include "tv/point.h"
@@ -160,23 +164,12 @@ unsigned char
 %include "tv/menuview.h"
 %include "tv/menuitem.h"
 %include "tv/menubar.h"
+%include "tv/submenu.h"
+%include "tv/menu.h"
 %include "tv/statsdef.h"
 %include "tv/statsitm.h"
 %include "tv/statslin.h"
+%include "tv/backgrnd.h"
+%include "tv/desktop.h"
 %include "tv/program.h"
 %include "tv/applictn.h"
-
-/*
-class TApplication : public TProgram
-{
-
-protected:
-
-    TApplication();
-    virtual ~TApplication();
-
-    virtual void suspend();
-    virtual void resume();
-
-};
-*/

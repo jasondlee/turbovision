@@ -5,13 +5,13 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
  */
 
-#if defined( Uses_TCommandSet ) && !defined( __TCommandSet )
+#if !defined( __TCommandSet )
 #define __TCommandSet
 
 class TCommandSet

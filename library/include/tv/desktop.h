@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea, tile, options, cursor behavior, etc.
 
  *
  *
  */
 
-#if defined( Uses_TDeskTop )  && !defined( __TDeskTop )
+#if !defined( __TDeskTop )
 #define __TDeskTop
 
 // SET: To set the tile partition priority
@@ -46,7 +46,7 @@ public:
     virtual void shutDown();
     TBackground *getBackground(void) { return background; }
     // SET: Added to setup the tileable options
-    unsigned getOptions() { return flagsOptions; }
+    ushort getOptions() { return flagsOptions; }
     void setOptions(unsigned aFlags) { flagsOptions=aFlags; }
     virtual Boolean canShowCursor();
     // SET: Added to help Braille Terminals
