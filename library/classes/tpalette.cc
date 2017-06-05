@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Vadim Beloborodov to be used on WIN32 console
  *
  *
@@ -14,6 +14,11 @@ Modified by Vadim Beloborodov to be used on WIN32 console
 #define Uses_string //memcpy()
 #define Uses_TPalette
 #include <tv.h>
+
+TPalette::TPalette( )
+{
+    
+}
 
 TPalette::TPalette( const char* d, ushort len ) :
     data( new uchar[ len+1 ] )

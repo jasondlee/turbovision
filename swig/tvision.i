@@ -1,5 +1,8 @@
 /* File : example.i */
-%module tvision
+%module(directors="1") tvision
+%feature("director") TApplication;
+%feature("director") TProgram;
+%feature("director") TProgInit;
 
 %{
 #define NO_STREAM1
@@ -15,7 +18,6 @@
 #define Uses_pstream 
 #define Uses_T1Label 
 #define Uses_T1StaticText
-//#define Uses_TApplication 
 #define Uses_TBackground 
 #define Uses_TButton 
 #define Uses_TCalcDisplay
@@ -40,7 +42,6 @@
 #define Uses_TDirListBox 
 #define Uses_TDrawBuffer 
 #define Uses_TEditor
-//#define Uses_TEditorApp
 #define Uses_TEditWindow
 #define Uses_TEvent 
 #define Uses_TEventQueue 

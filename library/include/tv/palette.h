@@ -19,6 +19,7 @@ class CLY_EXPORT TPalette
 
 public:
 
+    TPalette( );
     TPalette( const char *, ushort );
     TPalette( const TPalette& );
     ~TPalette();

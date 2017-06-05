@@ -19,11 +19,11 @@ class TApplication : public TProgram
 public:
     TApplication();
 
-protected:
-    virtual ~TApplication();
-
     virtual void suspend();
     virtual void resume();
+
+protected:
+    virtual ~TApplication();
 
 };
 

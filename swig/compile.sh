@@ -3,8 +3,6 @@
 JAVA_INCLUDE=-"I$JAVA_HOME/include -I$JAVA_HOME/include/linux"
 OUTDIR=src/generated/java/com/steeplesoft/turbovision/internal
 
-rm -rf src/generated/java
-mkdir -p $OUTDIR
 
 SWIG="false"
 MAVEN="false"
@@ -19,6 +17,9 @@ do
 done
 
 if [ "$SWIG" == "true" ] ; then
+    rm -rf src/generated/java
+    mkdir -p $OUTDIR
+
     swig -v $DEBUG -Wall -fvirtual\
         -c++ \
         -java \
