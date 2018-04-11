@@ -1,13 +1,21 @@
 Building TV
 ===========
 
-1. Install gdm-devel in addition to gcc, make, etc
-2. export PERLLIB=/path/to/source/turbovision
-3. cd turbovision && ./configure && make
+1. Install the following packages (Fedora):
+	a. gdm-devel
+	b. gcc
+	c. make
+	d. git
+	e. gcc-c++
+	f. java-1.8.0-openjdk	
+	g. swig
+2. Install maven and add it to PATH
+3. export PERLLIB=/path/to/source/turbovision
+4. export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.162-3.b12.fc28.x86_64
+4. cd library && ./configure && make
 
-Building the SQIG module
+Building the SWIG module
 ========================
-1. Install swig
 2. cd swig && ./compile.sh -sdm
 
 Running the demo
