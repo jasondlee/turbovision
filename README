@@ -9,6 +9,8 @@ Building TV
 	e. gcc-c++
 	f. java-1.8.0-openjdk	
 	g. swig
+	h. gpm-static
+	i. gpm-devel
 2. Install maven and add it to PATH
 3. export PERLLIB=/path/to/source/turbovision
 4. export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.162-3.b12.fc28.x86_64

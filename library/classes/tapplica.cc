@@ -11,7 +11,7 @@ Modified by Robert H�hne to be used for RHIDE.
  *
  */
 // SET: Moved the standard headers here because according to DJ
-// they can inconditionally declare symbols like NULL
+// they can unconditionally declare symbols like NULL
 #define Uses_stdio
 #define Uses_TEventQueue
 #define Uses_TScreen
