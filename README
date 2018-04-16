@@ -11,9 +11,11 @@ Building TV
 	g. swig
 	h. gpm-static
 	i. gpm-devel
-2. Install maven and add it to PATH
-3. export PERLLIB=/path/to/source/turbovision
-4. export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.162-3.b12.fc28.x86_64
+	
+	sudo dnf install gdm-devel gcc make gcc-c++ java-1.8.0-openjdk swig gpm-static gpm-devel maven
+
+2. export PERLLIB=/path/to/source/turbovision
+3. export JAVA_HOME=/usr/lib/jvm/java-1.8.0
 4. cd library && ./configure && make
 
 Building the SWIG module
