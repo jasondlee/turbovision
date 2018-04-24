@@ -2,6 +2,7 @@ Building TV
 ===========
 
 1. Install the following packages (Fedora):
+
 - gdm-devel
 - gcc
 - make
