@@ -76,8 +76,8 @@ class TMyApp : public TApplication
 
 public:
     TMyApp();
-    static TStatusLine *initStatusLine( TRect r );
-    static TMenuBar *initMenuBar( TRect r );
+    TStatusLine *initStatusLine( TRect r );
+    TMenuBar *initMenuBar( TRect r );
     virtual void handleEvent( TEvent& event);
     void newWindow();
     void newDialog();
@@ -229,9 +229,9 @@ void TDemoWindow::sizeLimits( TPoint& minP, TPoint& maxP )
 }
 
 TMyApp::TMyApp() :
-    TProgInit( &TMyApp::initStatusLine,
+    TProgInit( /*&TMyApp::initStatusLine,
                &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop
+               &TMyApp::initDeskTop*/
              )
 {
 }

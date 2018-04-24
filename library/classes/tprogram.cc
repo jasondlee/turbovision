@@ -51,38 +51,9 @@ char    TProgram::doNotHandleAltNumber = 0;
 extern TPoint shadowSize;
 
 TProgram::TProgram() :
-    TProgInit( 
-//                  &TProgram::initStatusLine,
-//                  &TProgram::initMenuBar,
-//                  &TProgram::initDeskTop
-                ),
+    TProgInit(),
     TGroup( TRect( 0,0,TScreen::screenWidth,TScreen::screenHeight ) )
-{
-    application = this;
-    initScreen();
-    state = sfVisible | sfSelected | sfFocused | sfModal | sfExposed;
-    options = 0;
-    syncScreenBuffer();
-
-    if( TScreen::noUserScreen() )
-        disableCommand( cmCallShell );
-
-    
-//    if( createStatusLine != 0 &&
-//        (statusLine = createStatusLine( getExtent() )) != 0
-//      )
-        insert(initStatusLine( getExtent() ));
-
-//    if( createMenuBar != 0 &&
-//        (menuBar = createMenuBar( getExtent() )) != 0
-//      )
-        insert(initMenuBar( getExtent() ));
-
-//    if( createDeskTop != 0 &&
-//        (deskTop = createDeskTop( getExtent() )) != 0
-//      )
-        insert(initDeskTop ( getExtent() ));
-
+{    
 }
 
 TProgram::~TProgram()
@@ -332,6 +303,19 @@ void TProgram::putEvent( TEvent & event )
 
 void TProgram::run()
 {
+    application = this;
+    initScreen();
+    state = sfVisible | sfSelected | sfFocused | sfModal | sfExposed;
+    options = 0;
+    syncScreenBuffer();
+
+    if( TScreen::noUserScreen() )
+        disableCommand( cmCallShell );
+
+    insert(initStatusLine( getExtent() ));
+    insert(initMenuBar( getExtent() ));
+    insert(initDeskTop ( getExtent() ));
+
     execute();
 }
 

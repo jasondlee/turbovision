@@ -5,3 +5,5 @@
 CVS
 *.lo
 /swig/target/
+orig
+*.gz

@@ -36,9 +36,9 @@ public:
 };
 
 TMyApp::TMyApp() :
-	TProgInit( &TMyApp::initStatusLine,
+	TProgInit( /*&TMyApp::initStatusLine,
 		       &TMyApp::initMenuBar,
-		       &TMyApp::initDeskTop
+		       &TMyApp::initDeskTop*/
 		     )
 {
 }

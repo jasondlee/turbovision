@@ -22,6 +22,7 @@ public:
     virtual void suspend();
     virtual void resume();
 
+
 protected:
     virtual ~TApplication();
 

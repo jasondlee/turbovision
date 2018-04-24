@@ -159,11 +159,7 @@ void initHistory();
 void doneHistory();
 
 TApplication::TApplication() :
-    TProgInit( 
-//                  &TApplication::initStatusLine,
-//                  &TApplication::initMenuBar,
-//                  &TApplication::initDeskTop
-                )
+    TProgInit()
 {
     if (!teq)
       teq = new TEventQueue();
@@ -176,4 +172,7 @@ TApplication::~TApplication()
     delete teq;
     teq = 0;
 }
+
+
+
 

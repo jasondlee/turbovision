@@ -38,14 +38,14 @@ class TMyApp : public TApplication
 
 public:
     TMyApp();
-    static TStatusLine *initStatusLine( TRect r );
+    TStatusLine *initStatusLine( TRect r ) override;
     // new for tvguid02
 };
 
 TMyApp::TMyApp() :
-    TProgInit( &TMyApp::initStatusLine,
+    TProgInit( /*&TMyApp::initStatusLine,
                &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop
+               &TMyApp::initDeskTop*/
              )
 {
 }

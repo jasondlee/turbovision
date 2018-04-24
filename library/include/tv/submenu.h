@@ -20,6 +20,8 @@ class CLY_EXPORT TSubMenu : public TMenuItem
 public:
 
     TSubMenu( const char *, ushort, ushort = hcNoContext );
+    TSubMenu& addItem ( TMenuItem& s2 );
+    TSubMenu& addSubMenu(TSubMenu& s2);
 
 };
 

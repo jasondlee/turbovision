@@ -6,7 +6,12 @@
 #
 .PHONY: clean
 
-examples=demo/demo desklogo/desklogo desklogo/set-logo \
+examples=tutorial/tvguid02 tutorial/tvguid03 tutorial/tvguid04 \
+	tutorial/tvguid05 tutorial/tvguid06 tutorial/tvguid07 \
+	tutorial/tvguid08 tutorial/tvguid09 tutorial/tvguid10 \
+	tutorial/tvguid11 tutorial/tvguid12 tutorial/tvguid13 \
+	tutorial/tvguid14 tutorial/tvguid15 tutorial/tvguid16 
+examples1=demo/demo desklogo/desklogo desklogo/set-logo \
 	desklogo/tv_logo dyntxt/dyntext \
 	inplis/implis listvi/lst_view msgcls/msgcls \
 	progba/test sdlg/test sdlg2/test tcombo/test \

@@ -59,6 +59,7 @@ objects inserted in the dialog.
 #define Uses_TRangeValidator
 #define Uses_MsgBox
 #include <tv.h>
+#include <iostream>
 
 UsingNamespaceStd
 
@@ -94,8 +95,8 @@ class TMyApp : public TApplication
 public:
     TMyApp();
     ~TMyApp();
-    static TStatusLine *initStatusLine( TRect r );
-    static TMenuBar *initMenuBar( TRect r );
+    TStatusLine *initStatusLine( TRect r );
+    TMenuBar *initMenuBar( TRect r );
     virtual void handleEvent( TEvent& event);
     void newWindow();
     void newDialog();
@@ -246,9 +247,12 @@ void TDemoWindow::sizeLimits( TPoint& minP, TPoint& maxP )
 }
 
 TMyApp::TMyApp() :
-    TProgInit( &TMyApp::initStatusLine,
+    TProgInit( 
+/*
+               &TMyApp::initStatusLine,
                &TMyApp::initMenuBar,
                &TMyApp::initDeskTop
+*/
              )
 {
     // new for tvguid16: set up initial dialog data
@@ -286,8 +290,9 @@ void TMyApp::handleEvent(TEvent& event)
         }
 }
 
-TMenuBar *TMyApp::initMenuBar( TRect r )
+TMenuBar* TMyApp::initMenuBar( TRect r )
 {
+    cerr << "TMyApp::initMenubar()\n";
     r.b.y = r.a.y + 1;    // set bottom line 1 line below top line
     return new TMenuBar( r,
         *new TSubMenu( "~F~ile", kbAltF )+
@@ -305,6 +310,7 @@ TMenuBar *TMyApp::initMenuBar( TRect r )
 
 TStatusLine *TMyApp::initStatusLine( TRect r )
 {
+    cerr << "TMyApp::initStatusLine()\n";
     r.a.y = r.b.y - 1;     // move top to 1 line above bottom
     return new TStatusLine( r,
         *new TStatusDef( 0, 0xFFFF ) +

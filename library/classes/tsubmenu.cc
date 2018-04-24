@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -39,6 +39,24 @@ CLY_EXPORT TSubMenu& operator + ( TSubMenu& s, TMenuItem& i )
     return s;
 }
 
+TSubMenu& TSubMenu::addItem ( TMenuItem& i )
+{
+    TSubMenu *sub = this;
+    while( sub->next != 0 )
+        sub = (TSubMenu *)(sub->next);
+
+    if( sub->subMenu == 0 )
+        sub->subMenu = new TMenu( i );
+    else
+        {
+        TMenuItem *cur = sub->subMenu->items;
+        while( cur->next != 0 )
+            cur = cur->next;
+        cur->next = &i;
+        }
+    return *this;
+}
+
 CLY_EXPORT TSubMenu& operator + ( TSubMenu& s1, TSubMenu& s2 )
 {
     TMenuItem *cur = &s1;
@@ -48,3 +66,11 @@ CLY_EXPORT TSubMenu& operator + ( TSubMenu& s1, TSubMenu& s2 )
     return s1;
 }
 
+TSubMenu& TSubMenu::addSubMenu(TSubMenu& s2)
+{
+    TMenuItem *cur = this;
+    while( cur->next != 0 )
+        cur = cur->next;
+    cur->next = &s2;
+    return *this;  
+}
