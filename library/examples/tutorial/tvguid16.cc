@@ -192,8 +192,8 @@ void TInterior::draw()       // modified for scroller
 // modified from tvguid08:
 TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
               short aNumber) :
-         TWindowInit( &TDemoWindow::initFrame ),
-         TWindow( bounds, aTitle, aNumber)
+////         TWindowInit( &TDemoWindow::initFrame ),
+         TWindow( bounds, aTitle, aNumber, &TDemoWindow::initFrame)
 {
     TRect lbounds = getExtent();
     TRect r( lbounds.a.x, lbounds.a.y, lbounds.b.x/2+1, lbounds.b.y );
@@ -246,14 +246,7 @@ void TDemoWindow::sizeLimits( TPoint& minP, TPoint& maxP )
     minP.x = lInterior->size.x+9;
 }
 
-TMyApp::TMyApp() :
-    TProgInit( 
-/*
-               &TMyApp::initStatusLine,
-               &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop
-*/
-             )
+TMyApp::TMyApp() : TProgInit()
 {
     // new for tvguid16: set up initial dialog data
     demoDialogData = new DialogData;

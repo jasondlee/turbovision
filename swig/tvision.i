@@ -3,6 +3,20 @@
 %feature("director") TApplication;
 %feature("director") TProgram;
 %feature("director") TProgInit;
+%feature("director") TWindow;
+%feature("director") TWindowInit;
+%feature("director") TView;
+%feature("director") TGroup;
+
+//%ignore TWindow::getPalette const;
+//
+//%rename ("$ignore") TWindow::getPalette;
+//
+//%ignore TWindow::getPalette;
+//
+//%rename ("getPalette2") "TWindow::getPalette";
+//
+//%rename("kbF2") "kbF2";
 
 %{
 #define NO_STREAM1
@@ -132,6 +146,21 @@
 
 %}
 
+//%pragma(java) jniclasscode=%{
+//    static {
+//        java.util.Arrays.asList("libtvision","librhtv").forEach(lib -> {
+//                try {
+//                    System.err.println("Loading " + lib);
+//                    System.load(lib);
+//                } catch (UnsatisfiedLinkError e) {
+//                    System.err.println("Native code library failed to load. See the chapter on Dynamic Linking Problems in the SWIG Java documentation for help.\n" + e);
+//                    System.exit(1);
+//                }
+//            });
+//    }
+//
+//%}
+
 %define NO_STREAM1
 %enddef
 
@@ -171,6 +200,9 @@ unsigned char
 %include "tv/statsitm.h"
 %include "tv/statslin.h"
 %include "tv/backgrnd.h"
+%include "tv/scroller.h"
+%include "tv/window.h"
 %include "tv/desktop.h"
 %include "tv/program.h"
 %include "tv/applictn.h"
+

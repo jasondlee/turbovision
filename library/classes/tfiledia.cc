@@ -48,7 +48,7 @@ TFileDialog::TFileDialog( const char *aWildCard,
                           ushort aOptions,
                           uchar histId
                         ) :
-    TWindowInit( &TFileDialog::initFrame ),
+    //TWindowInit( &TFileDialog::initFrame ),
     TDialog( TRect( 15, 1, 64, 21 ), aTitle ),
     directory( 0 )
 { // SET: Enlarged the window 1 line and added 1 line to the list moving

@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -25,9 +25,9 @@ THistInit::THistInit( TListViewer *(*cListViewer)( TRect, TWindow *, ushort ) ) 
 
 THistoryWindow::THistoryWindow( const TRect& bounds,
                                 ushort historyId ) :
-    TWindowInit( &THistoryWindow::initFrame )
-    , THistInit( &THistoryWindow::initViewer )
-    , TWindow( bounds, 0, wnNoNumber)
+    //TWindowInit( &THistoryWindow::initFrame ),
+    THistInit( &THistoryWindow::initViewer ),
+    TWindow( bounds, 0, wnNoNumber, &THistoryWindow::initFrame )
 {
     flags = wfClose;
     if( createListViewer != 0 &&

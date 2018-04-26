@@ -312,9 +312,21 @@ void TProgram::run()
     if( TScreen::noUserScreen() )
         disableCommand( cmCallShell );
 
-    insert(initStatusLine( getExtent() ));
-    insert(initMenuBar( getExtent() ));
-    insert(initDeskTop ( getExtent() ));
+    if( (statusLine = initStatusLine( getExtent() )) != 0) {
+        insert(statusLine);
+    }
+
+    if( (menuBar = initMenuBar( getExtent() )) != 0) {
+        insert(menuBar);
+    }
+
+    if( (deskTop = initDeskTop( getExtent() )) != 0) {
+        insert(deskTop);
+    }
+
+//    insert(initStatusLine( getExtent() ));
+//    insert(initMenuBar( getExtent() ));
+//    insert(initDeskTop ( getExtent() ));
 
     execute();
 }

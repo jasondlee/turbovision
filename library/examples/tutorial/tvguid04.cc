@@ -140,8 +140,8 @@ void TMyApp::myNewWindow()
 
 
 TDemoWindow::TDemoWindow( const TRect& r, const char *aTitle, short aNumber):
-                          TWindowInit( &TDemoWindow::initFrame),
-                          TWindow( r, aTitle, aNumber)
+                          //TWindowInit( &TDemoWindow::initFrame),
+                          TWindow( r, aTitle, aNumber, &TDemoWindow::initFrame )
 {
 }
 

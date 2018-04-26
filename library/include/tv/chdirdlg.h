@@ -54,8 +54,8 @@ private:
 
 protected:
     TChDirDialog( StreamableInit ) : 
-		TWindowInit( &TChDirDialog::initFrame )
-		, TDialog( streamableInit ) {}
+		//TWindowInit( &TChDirDialog::initFrame )
+		TDialog( streamableInit ) {}
     virtual void write( opstream& );
     virtual void *read( ipstream& );
 

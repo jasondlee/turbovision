@@ -43,6 +43,8 @@ public class TurboVisionDemo extends TApplication {
                 });
     }
 
+    private int winNumber = 0;
+    
     public TurboVisionDemo() {
         super();
     }
@@ -67,10 +69,21 @@ public class TurboVisionDemo extends TApplication {
 
         TSubMenu sub2 = new TSubMenu("~W~indow", kbAltW_get());
         sub2.addItem(new TMenuItem("~N~ext", cmNext_get(), kbF6_get(), hcNoContext_get(), "F6"))
-                .addItem(new TMenuItem("~Z~oom", cmZoom_get(), kbF5_get(), hcNoContext_get(), "F5"));
+                .addItem(new TMenuItem("~Z~oom", cmZoom_get(), kbF5_get(), hcNoContext_get(), "F5"))
+                .addItem(new TMenuItem( "~D~ialog", 202, kbF2_get(), hcNoContext_get(), "F2" ));
 
         TMenuBar menuBar = new TMenuBar(r, sub1.addSubMenu(sub2));
         return menuBar;
+    }
+
+    void newWindow() {
+        TRect r = new TRect ( 0, 0, 45, 13 );            // set initial size and position
+
+    /* SS: micro change here */
+//
+//    r.move((int)Math.random() % 34, (int)Math.random() % 11); 
+//        TDemoWindow window = new TDemoWindow(r, "Demo Window", ++winNumber);
+//        deskTop.insert(window);    // put window into desktop and draw it
     }
 
     public static void main(String argv[]) {
@@ -78,3 +91,36 @@ public class TurboVisionDemo extends TApplication {
         app.run();
     }
 }
+
+/*
+class TInterior extends TScroller
+{
+
+    public TInterior( TRect bounds, TScrollBar aHScrollBar,
+           TScrollBar aVScrollBar ) {
+        
+    }
+    public void draw() {
+        
+    }
+};
+
+
+class TDemoWindow extends TWindow      // define a new window class
+{
+
+    public TDemoWindow( const TRect bounds, String aTitle, short aNumber ) {
+    
+}
+    protected TInterior makeInterior( TRect r, Boolean left ) {
+        return null;
+    }
+    protected void sizeLimits( TPoint minP, TPoint maxP ) {
+        
+    }
+    // override TWindow::sizeLimits
+
+    private TInterior lInterior, rInterior;
+
+};
+*/

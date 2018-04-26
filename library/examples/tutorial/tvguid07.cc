@@ -213,8 +213,8 @@ void TMyApp::myNewWindow()
 
 TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
               short aNumber) :
-         TWindowInit( &TDemoWindow::initFrame ),
-         TWindow( bounds, aTitle, aNumber)
+         //TWindowInit( &TDemoWindow::initFrame ),
+         TWindow( bounds, aTitle, aNumber, &TDemoWindow::initFrame)
 {
     TRect r = getClipRect();    // get exposed area
     r.grow(-1, -1);             // make interior fit inside window frame

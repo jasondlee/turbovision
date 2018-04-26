@@ -239,8 +239,8 @@ void THelpViewer::handleEvent( TEvent& event )
 // THelpWindow
 
 THelpWindow::THelpWindow( THelpFile *hFile, ushort context ):
-       TWindowInit( &THelpWindow::initFrame),
-       TWindow( TRect(0,0,50,18), helpWinTitle, wnNoNumber )
+       //TWindowInit( &THelpWindow::initFrame),
+       TWindow( TRect(0,0,50,18), helpWinTitle, wnNoNumber, &THelpWindow::initFrame )
 {
     TRect r(0, 0, 50, 18);
     options = (options | ofCentered);

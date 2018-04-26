@@ -39,8 +39,8 @@ Modified by Salvador E. Tropea: added i18n support. Horizontal scroll bar.
 #include <tv.h>
 
 TChDirDialog::TChDirDialog( ushort opts, ushort histId ) :
-    TWindowInit( &TChDirDialog::initFrame )
-    , TDialog( TRect( 16, 2, 64, 21 ), __("Change Directory") )
+    //TWindowInit( &TChDirDialog::initFrame )
+    TDialog( TRect( 16, 2, 64, 21 ), __("Change Directory") )
 {
     options |= ofCentered;
 

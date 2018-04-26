@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified for i18n support by Salvador Eduardo Tropea.
 
  *
@@ -40,10 +40,13 @@ TWindowInit::TWindowInit( TFrame *(*cFrame)( TRect ) ) :
 
 TWindow::TWindow( const TRect& bounds,
                   const char *aTitle,
-                  short aNumber
+                  short aNumber,
+                  TFrame *(*cFrame)( TRect )
                 ) :
-    TWindowInit( &TWindow::initFrame ),
+//    TWindowInit( cFrame ),
     TGroup( bounds ),
+    createFrame(cFrame),
+//    frame( cFrame ),
     flags( wfMove | wfGrow | wfClose | wfZoom ),
     zoomRect( getBounds() ),
     number( aNumber ),
@@ -55,10 +58,9 @@ TWindow::TWindow( const TRect& bounds,
     options |= ofSelectable | ofTopSelect;
     growMode = gfGrowAll | gfGrowRel;
     eventMask |= evMouseUp; //for TFrame
-    if( createFrame != 0 &&
-        (frame = createFrame( getExtent() )) != 0
-      )
+    if( createFrame != 0 && (frame = createFrame( getExtent() )) != 0) {
         insert( frame );
+    }
 }
 
 TWindow::~TWindow()
@@ -266,7 +268,7 @@ TStreamable *TWindow::build()
 }
 
 TWindow::TWindow( StreamableInit ) :
-    TWindowInit( NULL ),
+    //TWindowInit( NULL ),
     TGroup( streamableInit )
 {
 }

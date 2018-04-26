@@ -565,7 +565,7 @@ sub FindCFLAGS
  $ret=@ENV{'CFLAGS'};
  if (!$ret)
    {
-    $ret='-O2'; # -gstabs+3';
+    $ret='-g -O2'; # -gstabs+3';
     # In UNIX pipes are in memory and allows multithreading so they are
     # usually faster. In Linux that's faster.
     $ret.=' -pipe' if $UsePipe;

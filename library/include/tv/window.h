@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified for i18n support by Salvador Eduardo Tropea.
 
  *
  *
  */
 
-#if defined( Uses_TWindow ) && !defined( __TWindow )
+#if !defined( __TWindow )
 #define __TWindow
 
 class TFrame;
@@ -49,19 +49,21 @@ protected:
 /*        8 = Reserved                                                    */
 /* ---------------------------------------------------------------------- */
 
-class CLY_EXPORT TWindow: public TGroup, public virtual TWindowInit
+class CLY_EXPORT TWindow: public TGroup // , public virtual TWindowInit
 {
 
 public:
 
     TWindow( const TRect& bounds,
 	     const char *aTitle,
-	     short aNumber
+	     short aNumber,
+             TFrame *(*cFrame)( TRect )
 	   );
     ~TWindow();
 
     virtual void close();
     virtual TPalette& getPalette() const;
+
     virtual const char *getTitle( short maxSize );
     virtual void handleEvent( TEvent& event );
     static TFrame *initFrame( TRect );
@@ -74,18 +76,19 @@ public:
     uchar flags;
     TRect zoomRect;
     short number;
-    short palette;
     TFrame *frame;
     const char *title;
     stTVIntl   *intlTitle;
 #if !defined( NO_STREAM )
 private:
+    short palette;
 
     virtual const char *streamableName() const
 	{ return name; }
 
 protected:
 
+    TFrame *(*createFrame)( TRect );
     TWindow( StreamableInit );
     virtual void write( opstream& );
     virtual void *read( ipstream& );

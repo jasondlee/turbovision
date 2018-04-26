@@ -45,11 +45,7 @@ class  TVMainConfigFile;
 class CLY_EXPORT TProgInit
 {
 public:
-    TProgInit( 
-               //TStatusLine *(*cStatusLine)( TRect ),
-               //TMenuBar *(*cMenuBar)( TRect ),
-               //TDeskTop *(*cDeskTop )( TRect )
-             );
+    TProgInit();
     virtual ~TProgInit();
     static TVMainConfigFile *config;
 

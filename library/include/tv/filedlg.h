@@ -70,7 +70,8 @@ protected:
 
 protected:
 
-    TFileDialog( StreamableInit ) :  TWindowInit( &TFileDialog::initFrame ), 
+    TFileDialog( StreamableInit ) :  
+	    //TWindowInit( &TFileDialog::initFrame ), 
             TDialog ( streamableInit ) {}
     virtual void write( opstream& );
     virtual void *read( ipstream& );

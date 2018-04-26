@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -19,7 +19,7 @@ Modified by Robert H”hne to be used for RHIDE.
 /*      2 = Selected text                                                 */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TScroller ) && !defined( __TScroller )
+#if !defined( __TScroller )
 #define __TScroller
 
 class TRect;

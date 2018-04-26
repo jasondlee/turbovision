@@ -19,8 +19,10 @@ done
 if [ "$SWIG" == "true" ] ; then
     rm -rf src/generated/java
     mkdir -p $OUTDIR
-
-    swig -v $DEBUG -Wall -fvirtual\
+    
+    # -Wall
+    swig -v $DEBUG -v -fvirtual\
+        -small\
         -c++ \
         -java \
         -outdir $OUTDIR  \
@@ -28,10 +30,17 @@ if [ "$SWIG" == "true" ] ; then
         -I../library/include -I$JAVA_HOME/include \
         -I$JAVA_HOME/include/linux \
         tvision.i
-    g++ -DUses_TApplication -c -fPIC $JAVA_INCLUDE -I../library/include -I/include/boost-0  \
-            -L../library/makes -lrhtv tvision_wrap.cxx  \
-            -I"/opt/jdk-1.8/include" -I"/opt/jdk-1.8/include/linux" && \
-        g++ -shared   tvision_wrap.o    -o libtvision.so -L../library/makes -lrhtv
+    if [ $? != 0 ] ; then
+        echo "SWIG failed"
+        exit -1
+    fi
+    g++ -DUses_TApplication -DUses_TWindow -c -fPIC $JAVA_INCLUDE -I../library/include -I/include/boost-0  \
+            -L../library/makes -lrhtv tvision_wrap.cxx  && \
+    g++ -shared   tvision_wrap.o    -o libtvision.so -L../library/makes -lrhtv
+    if [ $? != 0 ] ; then
+        echo "gcc failed"
+        exit -1
+    fi
 fi
 
 if [ "$MAVEN" == "true" ] ; then

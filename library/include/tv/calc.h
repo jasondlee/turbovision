@@ -110,7 +110,8 @@ public:
     
 #if !defined( NO_STREAM )
     TCalculator( StreamableInit ) :
-        TWindowInit(&TCalculator::initFrame), TDialog(streamableInit) { };
+        //TWindowInit(&TCalculator::initFrame), 
+	TDialog(streamableInit) { };
 
 private:
 

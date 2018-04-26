@@ -181,7 +181,7 @@ void TMyApp::handleEvent(TEvent& event)
         switch( event.message.command )
             {
             case cmMyNewWin:            // but respond to additional commands
-                myNewWindow();          // define action for cmMyNewWin                                // command
+                myNewWindow();          // define action for cmMyNewWin command
                 break;
             default:
                 return;
@@ -205,8 +205,8 @@ void TMyApp::myNewWindow()
 
 TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
               short aNumber) :
-         TWindowInit( &TDemoWindow::initFrame ),
-         TWindow( bounds, aTitle, aNumber)
+         //TWindowInit( &TDemoWindow::initFrame ),
+         TWindow( bounds, aTitle, aNumber, &TDemoWindow::initFrame)
 {
     TRect r = getClipRect();    // get exposed area
     r.grow(-1, -1);             // make interior fit inside window frame
