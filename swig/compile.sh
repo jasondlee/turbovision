@@ -34,7 +34,7 @@ if [ "$SWIG" == "true" ] ; then
         echo "SWIG failed"
         exit -1
     fi
-    g++ -DUses_TApplication -DUses_TWindow -c -fPIC $JAVA_INCLUDE -I../library/include -I/include/boost-0  \
+    g++ -c -fPIC $JAVA_INCLUDE -I../library/include -I/include/boost-0  \
             -L../library/makes -lrhtv tvision_wrap.cxx  && \
     g++ -shared   tvision_wrap.o    -o libtvision.so -L../library/makes -lrhtv
     if [ $? != 0 ] ; then
