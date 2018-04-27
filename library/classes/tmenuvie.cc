@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H�hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Salvador E. Tropea to support i18n.
 Added TMenuItem::append by Salvador E. Tropea.
 Modified the behavior of short-cuts when Alt is not/pressed by SET.

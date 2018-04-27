@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Salvador E. Tropea to support mouse wheels and other things.
 
  *
  *
  */
 // SET: Moved the standard headers here because according to DJ
-// they can inconditionally declare symbols like NULL
+// they can unconditionally declare symbols like NULL
 #include <ctype.h>
 #define Uses_string
 
@@ -95,12 +95,12 @@ void TScroller::handleEvent(TEvent& event)
         {
          if( event.mouse.buttons==mbButton4 )
              {
-              vScrollBar->setValue( vScrollBar->value - wheelStep );
+              vScrollBar->setValue( vScrollBar->getValue() - wheelStep );
               clearEvent( event );
              }
          else if( event.mouse.buttons==mbButton5 )
              {
-              vScrollBar->setValue( vScrollBar->value + wheelStep );
+              vScrollBar->setValue( vScrollBar->getValue() + wheelStep );
               clearEvent( event );
              }
         }
@@ -111,12 +111,12 @@ void TScroller::scrollDraw()
     TPoint  d;
 
     if( hScrollBar != 0 )
-        d.x = hScrollBar->value;
+        d.x = hScrollBar->getValue();
     else
         d.x = 0;
 
     if( vScrollBar != 0 )
-        d.y = vScrollBar->value;
+        d.y = vScrollBar->getValue();
     else
         d.y = 0;
 
@@ -148,14 +148,14 @@ void TScroller::setLimit( int32 x, int32 y )
     limit.y = y;
     drawLock++;
     if( hScrollBar != 0 )
-        hScrollBar->setParams( hScrollBar->value,
+        hScrollBar->setParams( hScrollBar->getValue(),
                                0,
                                x - size.x,
                                size.x,
                                1
                              );
     if( vScrollBar != 0 )
-        vScrollBar->setParams( vScrollBar->value,
+        vScrollBar->setParams( vScrollBar->getValue(),
                                0,
                                y - size.y,
                                size.y,

@@ -446,11 +446,11 @@ void TEditor::checkScrollBar( const TEvent& event,
                               int& d
                             )
 {
-    if( (event.message.infoPtr == p) && (p->value != d) )
-        {
-        d = p->value;
+    if( (event.message.infoPtr == p) && (p->getValue() != d) )
+    {
+        d = p->getValue();
         update( ufView );
-        }
+    }
 }
 
 void TEditor::handleEvent( TEvent& event )

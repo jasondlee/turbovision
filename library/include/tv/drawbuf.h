@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H�hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Changed classes hierarchy and added new draw buffers by Salvador E. Tropea
 (Changes under GPL as usual).
 

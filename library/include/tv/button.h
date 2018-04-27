@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H�hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Added callback, code page stuff and various details by Salvador Eduardo Tropea.
 Added new class TButtonRef by Salvador Eduardo Tropea.
 Added i18n support by Salvador Eduardo Tropea.

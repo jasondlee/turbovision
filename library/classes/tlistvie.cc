@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Vadim Beloborodov to be used on WIN32 console
 Modified by Salvador E. Tropea to add functionality.
  *
@@ -107,7 +107,7 @@ void TListViewer::draw()
         }
 
     if( hScrollBar != 0 )
-        indent = hScrollBar->value;
+        indent = hScrollBar->getValue();
     else
         indent = 0;
 
@@ -438,7 +438,7 @@ void TListViewer::handleEvent( TEvent& event )
                 {
                 if( vScrollBar == event.message.infoPtr )
                     {
-                    focusItemNum( vScrollBar->value );
+                    focusItemNum( vScrollBar->getValue() );
                     drawView();
                     }
                 else if( hScrollBar == event.message.infoPtr )

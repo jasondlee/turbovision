@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H�hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Salvador E. Tropea (release CPU and other stuff)
 Modified by Salvador E. Tropea to compile for 64 bits architectures.
 Modified by Salvador E. Tropea to disable Alt+N stuff.

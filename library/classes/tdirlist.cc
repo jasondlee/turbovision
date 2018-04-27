@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Vadim Beloborodov to be used on WIN32 console
 Modified by Salvador E. Tropea:
 * Changed to sort directory names.
@@ -18,7 +18,7 @@ Modified by Salvador E. Tropea:
  *
  */
 // SET: Moved the standard headers here because according to DJ
-// they can inconditionally declare symbols like NULL
+// they can unconditionally declare symbols like NULL
 #include <tv/configtv.h>
 #define Uses_string
 #define Uses_sys_stat
@@ -85,7 +85,7 @@ void TDirListBox::updateCursorPos()
     if( incPos > 1 )
        x += incPos - 1;
     if( hScrollBar )
-       x -= hScrollBar->value;
+       x -= hScrollBar->getValue();
     if( x <= 0 )
        hideCursor();
     else

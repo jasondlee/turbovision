@@ -45,4 +45,5 @@ fi
 
 if [ "$MAVEN" == "true" ] ; then
     mvn clean install
+    cp libtvision.so target/classes/
 fi

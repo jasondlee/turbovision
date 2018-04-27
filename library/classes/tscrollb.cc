@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 
  *
  *
@@ -330,6 +330,11 @@ void TScrollBar::setStep( int aPgStep, int aArStep )
 void TScrollBar::setValue( int32 aValue )
 {
     setParams( aValue, minVal, maxVal, pgStep, arStep );
+}
+
+int32 TScrollBar::getValue()
+{
+    return value;
 }
 
 #if !defined( NO_STREAM )

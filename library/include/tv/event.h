@@ -4,7 +4,7 @@
  *      Copyright (c) 1994 by Borland International
  *      All Rights Reserved.
  *
- * Modified by Robert H�hne to be used for RHIDE.
+ * Modified by Robert Hoehne to be used for RHIDE.
  * SET: Hardware abstaction with ideas from JASC.
  *
  */

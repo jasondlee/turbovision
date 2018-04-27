@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H�hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Vadim Beloborodov to be used on WIN32 console
  *
  *

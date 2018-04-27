@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 
  *
  *
@@ -20,7 +20,7 @@ Modified by Robert H”hne to be used for RHIDE.
 /*        3 = Indicator                                                   */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TScrollBar ) && !defined( __TScrollBar )
+#if !defined( __TScrollBar )
 #define __TScrollBar
 
 class TRect;
@@ -45,12 +45,10 @@ public:
     void setRange( int32 aMin, int32 aMax );
     void setStep( int aPgStep, int aArStep );
     void setValue( int32 aValue );
+    int32 getValue();
 
     void drawPos( int pos );
     int32 getPos();
-    int getSize();
-
-    int32 value;
 
     TScrollChars chars;
     int32 minVal;
@@ -64,6 +62,8 @@ public:
     static TScrollChars ohChars;
 
 private:
+    int32 value;
+    int getSize();
 
     int getPartCode(void);
 
