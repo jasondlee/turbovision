@@ -235,10 +235,8 @@ void TMyApp::myNewWindow()
     deskTop->insert(window);    // put window into desktop and draw it
 }
 
-TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
-              short aNumber) :
-         //TWindowInit( &TDemoWindow::initFrame ),
-         TWindow( bounds, aTitle, aNumber, &TDemoWindow::initFrame )
+TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle, short aNumber) :
+         TWindow( bounds, aTitle, aNumber)
 {
     makeInterior(); // creates scrollable interior and inserts into window
 }

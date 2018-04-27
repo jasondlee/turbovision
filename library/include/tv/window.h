@@ -56,8 +56,8 @@ public:
 
     TWindow( const TRect& bounds,
 	     const char *aTitle,
-	     short aNumber,
-             TFrame *(*cFrame)( TRect )
+	     short aNumber
+//             TFrame *(*cFrame)( TRect )
 	   );
     ~TWindow();
 

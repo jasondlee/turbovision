@@ -31,8 +31,7 @@ TEditWindow::TEditWindow( const TRect& bounds,
                           const char *fileName,
                           int aNumber
                         ) :
-    //TWindowInit( &TEditWindow::initFrame )
-    TWindow( bounds, 0, aNumber, &TEditWindow::initFrame )
+    TWindow( bounds, 0, aNumber)
 {
     options |= ofTileable;
 

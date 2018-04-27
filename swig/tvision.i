@@ -1,4 +1,3 @@
-/* File : example.i */
 %module(directors="1") tvision
 %feature("director") TApplication;
 %feature("director") TProgram;
@@ -7,6 +6,7 @@
 %feature("director") TWindowInit;
 %feature("director") TView;
 %feature("director") TGroup;
+%feature("director") TFrame;
 
 %{
 #define CLY_EXPORT
@@ -140,10 +140,9 @@
     static {
         java.util.Arrays.asList("tvision","rhtv").forEach(lib -> {
                 try {
-                    System.err.println("Loading " + lib);
                     System.loadLibrary(lib);
                 } catch (UnsatisfiedLinkError e) {
-                    System.err.println("Native code library failed to load. See the chapter on Dynamic Linking Problems in the SWIG Java documentation for help.\n" + e);
+                    System.err.println(String.format("Native code library '%1$s' failed to load.\n", lib) + e);
                     System.exit(-1);
                 }
             });
@@ -164,9 +163,7 @@ unsigned char
 
 %define CLY_EXPORT
 %enddef
-
-%rename("kbF3") kbF3_get;
-
+        
 %include "tv.h"
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"

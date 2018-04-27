@@ -80,13 +80,13 @@ class TInterior extends TScroller
     }
 };
 
-/*
 class TDemoWindow extends TWindow      // define a new window class
 {
 
     public TDemoWindow( TRect bounds, String aTitle, short aNumber ) {
-    
+        super(bounds, aTitle, aNumber);
     }
+    
     protected TInterior makeInterior( TRect r, Boolean left ) {
         return null;
     }
@@ -100,4 +100,3 @@ class TDemoWindow extends TWindow      // define a new window class
     private TInterior lInterior, rInterior;
 
 };
-*/

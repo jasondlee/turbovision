@@ -267,8 +267,7 @@ const char * const TFileViewer::operator [](int index)
 static int winNumber = 0;
 
 TFileWindow::TFileWindow( const char *fileName ) :
-    //TWindowInit( &TFileWindow::initFrame ),
-    TWindow( TProgram::deskTop->getExtent(), fileName, winNumber++ , &TFileWindow::initFrame)
+    TWindow( TProgram::deskTop->getExtent(), fileName, winNumber++)
 {
     options |= ofTileable;
     TRect r( getExtent() );

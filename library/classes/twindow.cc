@@ -40,12 +40,12 @@ TWindowInit::TWindowInit( TFrame *(*cFrame)( TRect ) ) :
 
 TWindow::TWindow( const TRect& bounds,
                   const char *aTitle,
-                  short aNumber,
-                  TFrame *(*cFrame)( TRect )
+                  short aNumber
+//                  TFrame *(*cFrame)( TRect )
                 ) :
 //    TWindowInit( cFrame ),
     TGroup( bounds ),
-    createFrame(cFrame),
+//    createFrame(cFrame),
 //    frame( cFrame ),
     flags( wfMove | wfGrow | wfClose | wfZoom ),
     zoomRect( getBounds() ),
@@ -58,7 +58,7 @@ TWindow::TWindow( const TRect& bounds,
     options |= ofSelectable | ofTopSelect;
     growMode = gfGrowAll | gfGrowRel;
     eventMask |= evMouseUp; //for TFrame
-    if( createFrame != 0 && (frame = createFrame( getExtent() )) != 0) {
+    if( (frame = initFrame( getExtent() )) != 0) {
         insert( frame );
     }
 }

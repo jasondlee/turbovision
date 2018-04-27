@@ -62,7 +62,6 @@ public:
    TDemoWindow( const TRect& r, const char *aTitle, short aNumber );
     // declare a constructor
 
-    //   static TFrame *initFrame( TRect r );
     // override needed only if you want a nonstandard frame
     // Here we'll inherit TWindow::initFrame unchanged
     // so TWindowInit will take &TDemoWindow::initFrame to give
@@ -72,10 +71,7 @@ public:
 
 
 TMyApp::TMyApp() :
-    TProgInit( /*&TMyApp::initStatusLine,
-               &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop*/
-             )
+    TProgInit()
 {
 }
 
@@ -140,8 +136,7 @@ void TMyApp::myNewWindow()
 
 
 TDemoWindow::TDemoWindow( const TRect& r, const char *aTitle, short aNumber):
-                          //TWindowInit( &TDemoWindow::initFrame),
-                          TWindow( r, aTitle, aNumber, &TDemoWindow::initFrame )
+                          TWindow( r, aTitle, aNumber)
 {
 }
 
