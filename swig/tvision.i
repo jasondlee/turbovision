@@ -7,6 +7,28 @@
 %feature("director") TView;
 %feature("director") TGroup;
 %feature("director") TFrame;
+%feature("director") TEvent;
+%feature("director") TValidator;
+%feature("director") TFilterValidator;
+%feature("director") TLookupValidator;
+%feature("director") TPXPictureValidator;
+%feature("director") TRangeValidator;
+%feature("director") TStringLookupValidator;
+%feature("director") TScrollBar;
+%feature("director") TScroller;
+%feature("director") TDialog;
+%feature("director") TCluster;
+%feature("director") TCheckBoxes;
+%feature("director") TSItem;
+%feature("director") TStaticText;
+%feature("director") TLabel;
+%feature("director") TRadioButtons;
+%feature("director") TInputLineBase;
+%feature("director") TInputLineBaseT;
+%feature("director") TInputLine;
+%feature("director") TInputLine16;
+%feature("director") TInputLineBaseT<char,TDrawBuffer>;
+%feature("director") TButton;
 
 %{
 #define CLY_EXPORT
@@ -62,7 +84,9 @@
 #define Uses_THistoryWindow 
 #define Uses_TIndicator 
 #define Uses_TInput1Line 
+#define Uses_TInputLineBase
 #define Uses_TInputLine 
+#define Uses_TInputLine16
 #define Uses_TKeys 
 #define Uses_TLabel 
 #define Uses_TListBox 
@@ -153,6 +177,10 @@
 %define NO_STREAM1
 %enddef
 
+%define CLY_BROKEN_WATCOM_SCOPE
+public
+%enddef
+
 %define ushort
 unsigned short
 %enddef
@@ -163,35 +191,79 @@ unsigned char
 
 %define CLY_EXPORT
 %enddef
-        
+
+%define int32
+int
+%enddef
+
+%define int8
+signed char 
+%enddef
+
+%define int16
+short
+%enddef
+
+%define uint8
+unsigned char
+%enddef
+
+%define uint16
+unsigned short
+%enddef
+
+%define uint32
+unsigned int
+%enddef
+
+%define uint64
+unsigned long long
+%enddef
+
+%define int64
+long long
+%enddef
+
 %include "tv.h"
 //%include "tv/backgrnd.h"
 //%include "tv/desktop.h"
+%include "tv/rect.h"
+%include "tv/views.h"
+%include "tv/view.h"
+%include "tv/window.h"
+%include "tv/drawbuf.h"
+
 %include "tv/tkeys.h"
 %include "tv/cmdset.h"
 %include "tv/palette.h"
-%include "tv/drawbuf.h"
-%include "tv/views.h"
 %include "tv/streambl.h"
 %include "tv/object.h"
 %include "tv/event.h"
-%include "tv/view.h"
 %include "tv/group.h"
 %include "tv/point.h"
-%include "tv/rect.h"
 %include "tv/screen.h"
+%include "tv/validate.h"
+%include "tv/dialog.h"
+%include "tv/sitem.h"
+%include "tv/cluster.h"
+%include "tv/checkbox.h"
 %include "tv/menuview.h"
 %include "tv/menuitem.h"
 %include "tv/menubar.h"
 %include "tv/submenu.h"
 %include "tv/menu.h"
+%include "tv/sttctext.h"
+%include "tv/label.h"
+%include "tv/radiobtn.h"
+%include "tv/inputln.h"
 %include "tv/statsdef.h"
 %include "tv/statsitm.h"
 %include "tv/statslin.h"
 %include "tv/backgrnd.h"
 %include "tv/scroller.h"
 %include "tv/scrlbar.h"
-%include "tv/window.h"
+%include "tv/button.h"
+
 %include "tv/desktop.h"
 %include "tv/program.h"
 %include "tv/applictn.h"

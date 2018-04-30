@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Modified by Salvador E. Tropea: added operators and append.
 
  *
  *
  */
 
-#if defined( Uses_TSItem ) && !defined( __TSItem )
+#if !defined( __TSItem )
 #define __TSItem
 
 class TSItem

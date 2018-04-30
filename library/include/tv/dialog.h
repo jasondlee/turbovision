@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 
  *
  *
@@ -49,7 +49,7 @@ Modified by Robert H”hne to be used for RHIDE.
 /*       32 = Reserved                                                    */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TDialog ) && !defined( __TDialog )
+#if !defined( __TDialog )
 #define __TDialog
 
 class TRect;

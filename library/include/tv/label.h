@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Salvador E. Tropea: added i18n support, T1Label inspired in
 TVTools but reworked.
 
@@ -23,7 +23,7 @@ TVTools but reworked.
 /*        4 = Selected shortcut                                           */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TLabel ) && !defined( TLabel_defined )
+#if !defined( TLabel_defined )
 #define TLabel_defined
 
 class TRect;

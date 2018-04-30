@@ -1993,7 +1993,7 @@ void TVCodePage::RemapTVStrings(ushort *map)
 
  if (UserHook) UserHook(map);
 
- message(TProgram::deskTop,evBroadcast,cmUpdateCodePage,map);
+ //message(TProgram::deskTop,evBroadcast,cmUpdateCodePage,map);
 }
 
 /**[txh]********************************************************************

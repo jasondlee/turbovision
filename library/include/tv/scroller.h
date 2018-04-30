@@ -50,8 +50,6 @@ public:
     static int defaultWheelStep;
     int wheelStep;
 
-protected:
-
     uchar drawLock;
     Boolean drawFlag;
     TScrollBar *hScrollBar;

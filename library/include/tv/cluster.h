@@ -21,7 +21,7 @@ Modified by Robert Hoehne to be used for RHIDE.
 /*        4 = Selected shortcut                                           */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TCluster ) && !defined( __TCluster )
+#if !defined( __TCluster )
 #define __TCluster
 
 class TRect;

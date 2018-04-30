@@ -6,9 +6,9 @@ import static com.steeplesoft.turbovision.SystemCodes.*;
  *
  * @author jdlee
  */
-public interface TCommandCodes {
+public interface CommandCodes {
 
-    int 
+    short 
             cmValid = 0,
             cmQuit = 1,
             cmError = 2,
@@ -150,5 +150,76 @@ public interface TCommandCodes {
             cmCallShell = 65,
             //  Event masks
             positionalEvents = evMouse,
-            focusedEvents = evKeyboard | evCommand;
+            focusedEvents = evKeyboard | evCommand,
+            
+            // Edit Command Code
+            ufUpdate = 0x01,
+            ufLine = 0x02,
+            ufView = 0x04,
+            // 
+            smExtend = 0x01,
+            smDouble = 0x02,
+            // 
+            sfSearchFailed = Short.MAX_VALUE,
+            //
+            cmSave = 80,
+            cmSaveAs = 81,
+            cmFind = 82,
+            cmReplace = 83,
+            cmSearchAgain = 84,
+            //
+            cmCharLeft = 500,
+            cmCharRight = 501,
+            cmWordLeft = 502,
+            cmWordRight = 503,
+            cmLineStart = 504,
+            cmLineEnd = 505,
+            cmLineUp = 506,
+            cmLineDown = 507,
+            cmPageUp = 508,
+            cmPageDown = 509,
+            cmTextStart = 510,
+            cmTextEnd = 511,
+            cmNewLine = 512,
+            cmBackSpace = 513,
+            cmDelChar = 514,
+            cmDelWord = 515,
+            cmDelStart = 516,
+            cmDelEnd = 517,
+            cmDelLine = 518,
+            cmInsMode = 519,
+            cmStartSelect = 520,
+            cmHideSelect = 521,
+            cmIndentMode = 522,
+            cmUpdateTitle = 523,
+            cmInsertText = 524,
+            //
+            edOutOfMemory = 0,
+            edReadError = 1,
+            edWriteError = 2,
+            edCreateError = 3,
+            edSaveModify = 4,
+            edSaveUntitled = 5,
+            edSaveAs = 6,
+            edFind = 7,
+            edSearchFailed = 8,
+            edReplace = 9,
+            edReplacePrompt = 10,
+            //
+            efCaseSensitive = 0x0001,
+            efWholeWordsOnly = 0x0002,
+            efPromptOnReplace = 0x0004,
+            efReplaceAll = 0x0008,
+            efDoReplace = 0x0010,
+            efBackupFiles = 0x0100,
+            //
+            maxLineLength = 256,
+            // SET: Added these old constants here
+            cmOpen = 100,
+            cmNew = 101,
+            cmChangeDrct = 102,
+            cmDosShell = 103,
+            cmCalculator = 104,
+            cmShowClip = 105,
+            cmMacros = 106;
 }

@@ -5,14 +5,14 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Salvador E. Tropea (TPXPictureValidator)
 
  *
  *
  */
 
-#if defined(Uses_TValidator) && !defined(TValidator_Included)
+#if !defined(TValidator_Included)
 #define TValidator_Included
 
 const ushort
@@ -80,7 +80,7 @@ inline opstream& operator << ( opstream& os, TValidator* cl )
 
 
 // TFilterValidator
-#if defined(Uses_TFilterValidator) && !defined(TFilterValidator_Included)
+#if !defined(TFilterValidator_Included)
 #define TFilterValidator_Included
 
 class CLY_EXPORT TFilterValidator : public TValidator
@@ -128,7 +128,7 @@ inline opstream& operator << ( opstream& os, TFilterValidator* cl )
 
 
 // TRangeValidator
-#if defined(Uses_TRangeValidator) && !defined(TRangeValidator_Included)
+#if !defined(TRangeValidator_Included)
 #define TRangeValidator_Included
 
 class CLY_EXPORT TRangeValidator : public TFilterValidator
@@ -244,7 +244,7 @@ inline opstream& operator << ( opstream& os, TPXPictureValidator* v )
 #endif // defined(Uses_TPXPictureValidator) && !defined(TPXPictureValidator_Included)
 
 
-#if defined(Uses_TLookupValidator) && !defined(TLookupValidator_Included)
+#if !defined(TLookupValidator_Included)
 #define TLookupValidator_Included
 
 // TLookupValidator
@@ -281,7 +281,7 @@ inline opstream& operator << ( opstream& os, TLookupValidator* v )
 #endif // defined(Uses_TLookupValidator) && !defined(TLookupValidator_Included)
 
 
-#if defined(Uses_TStringLookupValidator) && !defined(TStringLookupValidator_Included)
+#if !defined(TStringLookupValidator_Included)
 #define TStringLookupValidator_Included
 
 // TStringLookupValidator

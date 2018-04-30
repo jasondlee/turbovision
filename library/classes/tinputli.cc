@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Modified by Salvador E. Tropea (added insertChar, middle button paste and
 other stuff).
 This class was reworked to support Unicode 16 by Salvador E. Tropea

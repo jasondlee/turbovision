@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hï¿½hne to be used for RHIDE.
 Added TCheckBoxes32 and code page stuff by Salvador Eduardo Tropea.
 
  *
@@ -22,7 +22,7 @@ Added TCheckBoxes32 and code page stuff by Salvador Eduardo Tropea.
 /*        4 = Selected shortcut                                           */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TCheckBoxes ) && !defined( __TCheckBoxes )
+#if !defined( __TCheckBoxes )
 #define __TCheckBoxes
 
 class TRect;

@@ -112,11 +112,11 @@ public:
     virtual TMenuBar* initMenuBar( TRect );
     virtual TDeskTop* initDeskTop( TRect );
 
-    static TProgram * application;
-    static TStatusLine * statusLine;
-    static TMenuBar * menuBar;
-    static TDeskTop * deskTop;
-    static int appPalette;
+    /* static */ TProgram * application;
+    /* static */ TStatusLine * statusLine;
+    /* static */ TMenuBar * menuBar;
+    /* static */ TDeskTop * deskTop;
+    /* static */ int appPalette;
 
     // Added by SET
     static clock_t lastIdleClock; // That's the value of clock in the moment

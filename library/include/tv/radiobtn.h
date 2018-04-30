@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H”hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Added TRadioButtons32 and code page stuff by Salvador Eduardo Tropea.
 
  *
@@ -23,7 +23,7 @@ Added TRadioButtons32 and code page stuff by Salvador Eduardo Tropea.
 /* ---------------------------------------------------------------------- */
 
 
-#if defined( Uses_TRadioButtons ) && !defined( __TRadioButtons )
+#if !defined( __TRadioButtons )
 #define __TRadioButtons
 
 class TRect;
@@ -44,7 +44,7 @@ public:
     virtual void setData( void *rec );
 
     // SET: Used to enable/disable other TViews according to current state.
-    // Upto 32 can be controled.
+    // Upto 32 can be controlled.
     void setEnableMask( uint32 *masks, TView **views, int cViews )
     {
      enableMasks = masks;

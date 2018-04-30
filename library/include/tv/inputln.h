@@ -5,7 +5,7 @@
  *      All Rights Reserved.
  *
 
-Modified by Robert H?hne to be used for RHIDE.
+Modified by Robert Hoehne to be used for RHIDE.
 Heavily modified by Salvador E. Tropea to support multibyte encodings.
 Now the original TInputLine is composed by:
 
@@ -30,7 +30,7 @@ Added: TInput1Line class by SET (based on TVTools idea).
 /*        4 = Arrows                                                      */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TInputLine ) && !defined( TInputLine_defined )
+#if !defined( TInputLine_defined )
 #define TInputLine_defined
 
 class TRect;
@@ -261,7 +261,7 @@ inline opstream& operator << ( opstream& os, TInputLineU16* cl )
 
 #endif  // Uses_TInputLine
 
-#if defined( Uses_TInput1Line ) && !defined( TInput1Line_defined )
+#if !defined( TInput1Line_defined )
 #define TInput1Line_defined
 // This is based on TVTools idea, but I think is better to implement it
 // in this way and not like a macro.

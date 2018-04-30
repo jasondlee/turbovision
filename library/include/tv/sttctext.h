@@ -19,7 +19,7 @@ Modified by Salvador E. Tropea: added i18n support, added T1StaticText.
 /*        1 = Text                                                        */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TStaticText ) && !defined( TStaticText_defined )
+#if !defined( TStaticText_defined )
 #define TStaticText_defined
 
 class TRect;
