@@ -413,7 +413,7 @@ private:
 
 class streambuf;
 
-#include <iostream.h>
+#include <ios>
 
 class TStreamableTypes;
 
@@ -551,14 +551,14 @@ protected:
 #if defined( Uses_ipstream ) && !defined( __ipstream )
 #define __ipstream
 
-#include <iostream.h>
+#include <ios>
 
 class TStreamableClass;
 
 /**
  * ipstream, a specialized input stream derivative of @ref pstream, is the
  * base class for reading (extracting) streamable objects. ipstream is
- * analogous to istream, defined in `iostream.h' for the standard C++ stream
+ * analogous to istream, defined in `ios' for the standard C++ stream
  * library. ipstream is a friend class of @ref TPReadObjects.
  *
  * The overloaded operators >> extract (read) from the given ipstream object
@@ -728,14 +728,14 @@ private:
 #if defined( Uses_opstream ) && !defined( __opstream )
 #define __opstream
 
-#include <iostream.h>
+#include <ios>
 
 class TStreamableClass;
 
 /**
  * opstream, a specialized output stream derivative of @ref pstream, is the
  * base class for writing (inserting) streamable objects. opstream is
- * analogous to ostream, defined in `iostream.h' for the standard C++ stream
+ * analogous to ostream, defined in `ios' for the standard C++ stream
  * library. opstream is a friend class of @ref TPWrittenObjects.
  *
  * The overloaded operators << insert (write) the given argument to the given
@@ -909,7 +909,7 @@ private:
 #if defined( Uses_iopstream ) && !defined( __iopstream )
 #define __iopstream
 
-#include <iostream.h>
+#include <ios>
 
 /**
  * Class iopstream is a simple "mix" of its bases, @ref opstream and
@@ -1024,7 +1024,7 @@ private:
 #if defined( Uses_ifpstream ) && !defined( __ifpstream )
 #define __ifpstream
 
-#include <iostream.h>
+#include <ios>
 
 /**
  * ifpstream is a simple "mix" of its bases, @ref fpbase and @ref ipstream.
@@ -1090,7 +1090,7 @@ public:
 #if defined( Uses_ofpstream ) && !defined( __ofpstream )
 #define __ofpstream
 
-#include <iostream.h>
+#include <ios>
 
 /**
  * Class ofpstream is a simple "mix" of its bases, @ref fpbase and
@@ -1157,7 +1157,7 @@ public:
 #if defined( Uses_fpstream ) && !defined( __fpstream )
 #define __fpstream
 
-#include <iostream.h>
+#include <ios>
 
 /**
  * fpstream is a simple "mix" of its bases, @ref fpbase and @ref iopstream.

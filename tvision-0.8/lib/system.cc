@@ -50,7 +50,7 @@
 #include <ctype.h>
 #include <fcntl.h>
 #include <fstream.h>
-#include <iostream.h>
+#include <ios>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>

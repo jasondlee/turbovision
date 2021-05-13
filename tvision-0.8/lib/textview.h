@@ -16,7 +16,7 @@
  * textview.h
  */
 
-#include <iostream.h>
+#include <ios>
 
 class TRect;
 class TScrollBar;
@@ -170,7 +170,7 @@ protected:
 
 class ostream;
 
-#include <iostream.h>
+#include <ios>
 
 /**
  * Undocumented.
@@ -190,7 +190,7 @@ public:
     /**
      * Overrides the corresponding function in class streambuf.
      *
-     * When the internal buffer in a streambuf is full and the iostream
+     * When the internal buffer in a streambuf is full and the ios
      * associated with that streambuf tries to put another character into the
      * buffer, overflow() is called. Its argument `c' is the character that
      * caused the overflow.
